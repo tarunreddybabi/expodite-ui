@@ -33,7 +33,7 @@ const data = {
   user: {
     name: "Expodite",
     email: "admin@expodite.com",
-    avatar: "/avatars/shadcn.jpg",
+    avatar: "",
   },
   navMain: [
     { title: "Overview", url: "/overview", icon: Home },

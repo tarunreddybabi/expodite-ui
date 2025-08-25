@@ -33,8 +33,14 @@ export function NavMain({
   return (
     <SidebarGroup>
       <SidebarMenu>
-        <div className="flex items-center px-3 py-2">
-          <Image src="/expodite.png" alt="logo" width={32} height={32} />
+        <div className="flex items-center group-data-[collapsible=icon]:justify-center px-3 py-2">
+          <Image
+            src="/expodite.png"
+            alt="logo"
+            width={32}
+            height={32}
+            className="min-w-[32px] min-h-[32px] w-8 h-8 object-contain transition-all duration-200 group-data-[collapsible=icon]:w-6 group-data-[collapsible=icon]:h-6"
+          />
         </div>
         {items.map((item) => {
           const isActive = pathname.startsWith(item.url);

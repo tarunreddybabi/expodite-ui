@@ -3,6 +3,7 @@
 import * as React from "react";
 import {
   ColumnDef,
+  ColumnFiltersState,
   flexRender,
   getCoreRowModel,
   getFilteredRowModel,
@@ -26,24 +27,42 @@ import {
 type CustomTableProps<TData> = {
   data: TData[];
   columns: ColumnDef<TData>[];
+  filter?: string;
+  filterKey?: string;
 };
 
-const CustomTable = <TData,>({ data, columns }: CustomTableProps<TData>) => {
+const CustomTable = <TData,>({
+  data,
+  columns,
+  filter,
+  filterKey = "orderNumber",
+}: CustomTableProps<TData>) => {
   const [sorting, setSorting] = React.useState<SortingState>([]);
   const [columnVisibility, setColumnVisibility] =
     React.useState<VisibilityState>({});
   const [rowSelection, setRowSelection] = React.useState({});
+  const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
+    []
+  );
+
+  React.useEffect(() => {
+    if (filter && filter.trim() !== "") {
+      setColumnFilters([
+        {
+          id: filterKey,
+          value: filter,
+        },
+      ]);
+    } else {
+      setColumnFilters([]);
+    }
+  }, [filter, filterKey]);
 
   const table = useReactTable({
     data,
     columns,
-    defaultColumn: {
-      size: 150,
-      minSize: 50,
-      maxSize: 500,
-    },
-    columnResizeMode: "onChange",
     onSortingChange: setSorting,
+    onColumnFiltersChange: setColumnFilters,
     getCoreRowModel: getCoreRowModel(),
     getPaginationRowModel: getPaginationRowModel(),
     getSortedRowModel: getSortedRowModel(),
@@ -52,6 +71,7 @@ const CustomTable = <TData,>({ data, columns }: CustomTableProps<TData>) => {
     onRowSelectionChange: setRowSelection,
     state: {
       sorting,
+      columnFilters,
       columnVisibility,
       rowSelection,
     },
@@ -83,28 +103,40 @@ const CustomTable = <TData,>({ data, columns }: CustomTableProps<TData>) => {
             ))}
           </TableHeader>
           <TableBody>
-            {table.getRowModel().rows.map((row) => (
-              <TableRow key={row.id}>
-                {row.getVisibleCells().map((cell) => (
-                  <TableCell
-                    key={cell.id}
-                    style={{
-                      width: cell.column.getSize(),
-                    }}
-                  >
-                    {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                  </TableCell>
-                ))}
+            {table.getRowModel().rows.length > 0 ? (
+              table.getRowModel().rows.map((row) => (
+                <TableRow key={row.id}>
+                  {row.getVisibleCells().map((cell) => (
+                    <TableCell
+                      key={cell.id}
+                      style={{ width: cell.column.getSize() }}
+                    >
+                      {flexRender(
+                        cell.column.columnDef.cell,
+                        cell.getContext()
+                      )}
+                    </TableCell>
+                  ))}
+                </TableRow>
+              ))
+            ) : (
+              <TableRow>
+                <TableCell
+                  colSpan={columns.length}
+                  className="text-center py-6"
+                >
+                  No matching results
+                </TableCell>
               </TableRow>
-            ))}
+            )}
           </TableBody>
         </Table>
       </div>
 
       <div className="flex items-center justify-between space-x-2 py-4">
         <div className="text-sm">
-          Showing {table.getRowModel().rows.length} out of{" "}
-          {table.getFilteredRowModel().rows.length}
+          Showing {table.getRowModel().rows.length} of{" "}
+          {table.getFilteredRowModel().rows.length} results
         </div>
 
         <div className="space-x-2">

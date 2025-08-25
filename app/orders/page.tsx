@@ -253,6 +253,7 @@ export const columns: ColumnDef<Payment>[] = [
 ];
 
 const Orders = () => {
+  const [search, setSearch] = React.useState("");
   return (
     <div className="flex h-full">
       <div className="w-[18%] border-r h-full p-4 space-y-4">
@@ -363,12 +364,19 @@ const Orders = () => {
               type="text"
               className="pl-8 w-full"
               placeholder="Search by Order Number"
+              onChange={(e) => setSearch(e.target.value)}
+              value={search}
             />
           </div>
           <Button>Create Order</Button>
         </div>
         <div className="ml-6">
-          <CustomTable data={data} columns={columns} />
+          <CustomTable
+            data={data}
+            columns={columns}
+            filter={search}
+            filterKey="orderNumber"
+          />
         </div>
       </div>
     </div>
