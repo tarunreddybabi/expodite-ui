@@ -1,10 +1,5 @@
-'use client'
-
-import OverView from "./overview/page";
+import { redirect } from "next/navigation";
 
 export default function Home() {
-
-  return (
-    <OverView/>
-  );
+  redirect("/overview");
 }
