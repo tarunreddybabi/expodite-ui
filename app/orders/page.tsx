@@ -18,18 +18,18 @@ import { Search } from "lucide-react";
 import React from "react";
 import Link from "next/link";
 
-export type Payment = {
+export type Order = {
   id: string;
-  amount: number;
   orderNumber: string;
-  poNumber: string;
   attention: string;
-  shipments: string;
   accountManager: string;
+  shipments: string;
+  poNumber: string;
+  amount: number;
   status: "pending" | "success" | "processing" | "failed";
 };
 
-const data: Payment[] = [
+const data: Order[] = [
   {
     id: "ord-1001",
     amount: 316,
@@ -182,7 +182,7 @@ const data: Payment[] = [
   },
 ];
 
-export const columns: ColumnDef<Payment>[] = [
+export const columns: ColumnDef<Order>[] = [
   {
     accessorKey: "orderNumber",
     header: "ORDER NUMBER",
