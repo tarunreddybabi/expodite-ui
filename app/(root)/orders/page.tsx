@@ -1,6 +1,6 @@
 "use client";
 
-import CustomTable from "@/components/custom-table";
+import CustomTable from "@/components/CustomTable";
 import { Button } from "@/components/ui/button";
 import { ColumnDef } from "@tanstack/react-table";
 import { DatePicker } from "@/components/ui/date-picker";

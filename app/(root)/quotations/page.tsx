@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import CustomTable from "@/components/custom-table";
+import CustomTable from "@/components/CustomTable";
 import { Button } from "@/components/ui/button";
 import { DatePicker } from "@/components/ui/date-picker";
 import { Input } from "@/components/ui/input";
