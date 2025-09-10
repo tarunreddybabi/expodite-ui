@@ -225,15 +225,15 @@ const Quotations = () => {
   return (
     <div className="flex h-full">
       <div className="w-[18%] border-r h-full p-4 space-y-4">
-        <h1 className="text-xl font-semibold border-b pb-3">Quotations (0)</h1>
+        <h1 className="text-xl font-semibold border-b pb-3">Quotations ({data?.length})</h1>
 
         <div className="space-y-2">
-          <p className="text-sm font-medium  ">Created Date</p>
+          <p className="text-sm font-medium">Created Date</p>
           <DatePicker className="w-full" />
         </div>
 
         <div className="space-y-2">
-          <p className="text-sm font-medium  ">Clients</p>
+          <p className="text-sm font-medium">Clients</p>
           <Select>
             <SelectTrigger className="w-full">
               <SelectValue placeholder="Select Client" />
@@ -251,7 +251,7 @@ const Quotations = () => {
         </div>
 
         <div className="space-y-2">
-          <p className="text-sm font-medium  ">Products</p>
+          <p className="text-sm font-medium">Products</p>
           <Select>
             <SelectTrigger className="w-full">
               <SelectValue placeholder="Select Product" />
@@ -269,7 +269,7 @@ const Quotations = () => {
         </div>
 
         <div className="space-y-2">
-          <p className="text-sm font-medium  ">Account Manager</p>
+          <p className="text-sm font-medium">Account Manager</p>
           <Select>
             <SelectTrigger className="w-full">
               <SelectValue placeholder="Select Manager" />
@@ -286,7 +286,7 @@ const Quotations = () => {
           </Select>
         </div>
         <div className="space-y-2">
-          <p className="text-sm font-medium  ">Country</p>
+          <p className="text-sm font-medium">Country</p>
           <Select>
             <SelectTrigger className="w-full">
               <SelectValue placeholder="Select Country" />

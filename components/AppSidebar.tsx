@@ -18,6 +18,7 @@ import {
   Factory,
   Settings,
   BarChart2,
+  Receipt,
 } from "lucide-react"
 
 import { NavMain } from "@/components/NavMain"
@@ -40,6 +41,7 @@ const data = {
     { title: "Quotations", url: "/quotations", icon: FileText },
     { title: "Orders", url: "/orders", icon: ShoppingCart },
     { title: "Shipments", url: "/shipments", icon: Truck },
+    { title: "Invoices", url: "/invoices", icon: Receipt },
     { title: "Payments", url: "/payments", icon: CreditCard },
     { title: "PO", url: "/purchase-orders", icon: FileSignature },
     { title: "Inventory", url: "/inventory", icon: Boxes },

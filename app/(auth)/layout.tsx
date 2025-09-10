@@ -5,9 +5,7 @@ import { CheckCircle } from "lucide-react";
 const AuthLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="min-h-screen grid grid-cols-1 lg:grid-cols-2">
-      {/* Left side with branding */}
       <div className="hidden lg:flex flex-col justify-between bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-[#312e81] text-white p-12 relative overflow-hidden">
-        {/* Decorative overlays */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.08),transparent_70%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,_rgba(59,130,246,0.12),transparent_70%)]" />
 
@@ -57,11 +55,11 @@ const AuthLayout = ({ children }: { children: React.ReactNode }) => {
       </div>
 
       {/* Right side with form */}
-      <div className="flex items-center justify-center p-8 bg-gray-50 dark:bg-gray-900">
-        <div className="w-full max-w-md bg-white dark:bg-gray-800 shadow-xl rounded-2xl p-8">
+      {/* <div className="flex items-center justify-center p-8 bg-gray-50 dark:bg-gray-900">
+        <div className="w-full max-w-md bg-white dark:bg-gray-800 shadow-xl rounded-2xl p-8"> */}
           {children}
-        </div>
-      </div>
+        {/* </div>
+      </div> */}
     </div>
   );
 };
