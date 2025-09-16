@@ -1,10 +1,13 @@
 "use client";
 
-import CustomTable from "@/components/CustomTable";
-import { Button } from "@/components/ui/button";
+import React from "react";
+import { Search } from "lucide-react";
 import { ColumnDef } from "@tanstack/react-table";
-import { Input } from "@/components/ui/input";
+
 import {
+  Button,
+  CustomTable,
+  Input,
   Select,
   SelectContent,
   SelectGroup,
@@ -12,9 +15,7 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
-import { Search } from "lucide-react";
-import React from "react";
+} from "@/components";
 
 export type Invoice = {
   id: string;

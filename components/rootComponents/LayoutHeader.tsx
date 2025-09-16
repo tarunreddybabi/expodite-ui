@@ -2,7 +2,7 @@
 
 import { SidebarTrigger } from "@/components/ui/sidebar";
 
-export default function LayoutHeader() {
+export function LayoutHeader() {
 
   return (
     <div className="flex items-center px-6 py-4 border-b">

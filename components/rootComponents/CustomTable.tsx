@@ -31,7 +31,7 @@ type CustomTableProps<TData> = {
   filterKey?: string;
 };
 
-const CustomTable = <TData,>({
+export const CustomTable = <TData,>({
   data,
   columns,
   filter,
@@ -164,5 +164,3 @@ const CustomTable = <TData,>({
     </div>
   );
 };
-
-export default CustomTable;

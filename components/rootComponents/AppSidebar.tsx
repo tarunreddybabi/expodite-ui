@@ -21,8 +21,8 @@ import {
   Receipt,
 } from "lucide-react"
 
-import { NavMain } from "@/components/NavMain"
-import { NavUser } from "@/components/NavUser"
+import { NavMain } from "@/components/rootComponents/NavMain"
+import { NavUser } from "@/components/rootComponents/NavUser"
 import {
   Sidebar,
   SidebarContent,
@@ -57,7 +57,7 @@ const data = {
   ],
 }
 
-export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+export  function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar collapsible="icon" {...props}>
       <SidebarContent>

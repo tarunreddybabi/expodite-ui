@@ -1,12 +1,13 @@
 "use client";
 
 import React from "react";
-import CustomTable from "@/components/CustomTable";
-import { Button } from "@/components/ui/button";
-import { ColumnDef } from "@tanstack/react-table";
-import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
+import { ColumnDef } from "@tanstack/react-table";
+
 import {
+  Button,
+  CustomTable,
+  Input,
   Select,
   SelectContent,
   SelectGroup,
@@ -14,9 +15,8 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
+} from "@/components";
 
-// ✅ Correct type for EPCG data
 export type EpcgItem = {
   id: string;
   licenseNumber: string;
@@ -28,7 +28,6 @@ export type EpcgItem = {
   status: "active" | "completed" | "expired" | "pending";
 };
 
-// ✅ Example EPCG data
 const data: EpcgItem[] = [
   {
     id: "epcg-1001",
@@ -72,7 +71,6 @@ const data: EpcgItem[] = [
   },
 ];
 
-// ✅ Table columns
 export const columns: ColumnDef<EpcgItem>[] = [
   { accessorKey: "licenseNumber", header: "EPCG LICENSE NUMBER" },
   {

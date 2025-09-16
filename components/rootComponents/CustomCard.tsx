@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
-const CustomCard = ({ title, description }: CustomCardProps) => {
+export const CustomCard = ({ title, description }: CustomCardProps) => {
   return (
     <Card className="w-full">
       <CardHeader>
@@ -13,4 +13,3 @@ const CustomCard = ({ title, description }: CustomCardProps) => {
   );
 };
 
-export default CustomCard;

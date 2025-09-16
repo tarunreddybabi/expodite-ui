@@ -1,5 +1,4 @@
-import AuthForm from "@/components/AuthForm";
-import React from "react";
+import { AuthForm } from "@/components";
 
 const page = () => {
   return <AuthForm type="sign-in" />;

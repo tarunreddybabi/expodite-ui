@@ -40,7 +40,7 @@ interface AuthFormProps {
   type: FormType;
 }
 
-const AuthForm = ({ type }: AuthFormProps) => {
+export const AuthForm = ({ type }: AuthFormProps) => {
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -157,4 +157,3 @@ const AuthForm = ({ type }: AuthFormProps) => {
   );
 };
 
-export default AuthForm;

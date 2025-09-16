@@ -1,12 +1,13 @@
 "use client";
 
 import React from "react";
-import CustomTable from "@/components/CustomTable";
-import { Button } from "@/components/ui/button";
-import { ColumnDef } from "@tanstack/react-table";
-import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
+import { ColumnDef } from "@tanstack/react-table";
+
 import {
+  Button,
+  CustomTable,
+  Input,
   Select,
   SelectContent,
   SelectGroup,
@@ -14,7 +15,7 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
+} from "@/components";
 
 export type ForwardContractItem = {
   id: string;

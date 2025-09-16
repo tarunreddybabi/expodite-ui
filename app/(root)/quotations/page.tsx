@@ -1,11 +1,14 @@
 "use client";
 
 import React from "react";
-import CustomTable from "@/components/CustomTable";
-import { Button } from "@/components/ui/button";
-import { DatePicker } from "@/components/ui/date-picker";
-import { Input } from "@/components/ui/input";
+import { Search } from "lucide-react";
+import { ColumnDef } from "@tanstack/react-table";
+
 import {
+  Button,
+  CustomTable,
+  DatePicker,
+  Input,
   Select,
   SelectContent,
   SelectGroup,
@@ -13,9 +16,7 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
-import { ColumnDef } from "@tanstack/react-table";
-import { Search } from "lucide-react";
+} from "@/components";
 
 export type Quotation = {
   id: string;

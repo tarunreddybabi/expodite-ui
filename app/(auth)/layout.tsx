@@ -9,7 +9,6 @@ const AuthLayout = ({ children }: { children: React.ReactNode }) => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.08),transparent_70%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,_rgba(59,130,246,0.12),transparent_70%)]" />
 
-        {/* Top: Logo */}
         <div className="relative flex items-center gap-3">
           <Image
             src="/expodite.png"
@@ -21,7 +20,6 @@ const AuthLayout = ({ children }: { children: React.ReactNode }) => {
           <h1 className="text-2xl font-bold tracking-wide">Expodite</h1>
         </div>
 
-        {/* Middle: Hero content */}
         <div className="relative flex flex-col text-center items-center px-4">
           <h2 className="text-3xl font-extrabold leading-snug">
             Streamline Your Exports.  
@@ -33,7 +31,6 @@ const AuthLayout = ({ children }: { children: React.ReactNode }) => {
             businesses that move fast.
           </p>
 
-          {/* Features list */}
           <div className="mt-6 grid gap-3 text-left max-w-sm">
             {[
               "Manage shipments effortlessly",
@@ -48,7 +45,6 @@ const AuthLayout = ({ children }: { children: React.ReactNode }) => {
           </div>
         </div>
 
-        {/* Footer */}
         <p className="relative text-xs text-blue-200 text-center">
           © {new Date().getFullYear()} Expodite. All rights reserved.
         </p>

@@ -1,10 +1,10 @@
 "use client";
 
-import CustomCard from "@/components/CustomCard";
 import Link from "next/link";
 import { ColumnDef } from "@tanstack/react-table";
 import { ChevronRight } from "lucide-react";
-import CustomTable from "@/components/CustomTable";
+
+import { CustomCard, CustomTable } from "@/components";
 
 export type Payment = {
   id: string;
