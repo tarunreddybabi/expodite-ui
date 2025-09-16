@@ -42,6 +42,7 @@ export function NavMain({
             className="min-w-[32px] min-h-[32px] w-8 h-8 object-contain transition-all duration-200 group-data-[collapsible=icon]:w-6 group-data-[collapsible=icon]:h-6"
           />
         </div>
+
         {items.map((item) => {
           const isActive = pathname.startsWith(item.url);
 
@@ -53,8 +54,8 @@ export function NavMain({
                 className={cn(
                   "flex items-center gap-2 px-3 py-2 rounded-md transition-colors",
                   isActive
-                    ? "bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300"
-                    : "text-gray-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800"
+                    ? "bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300 cursor-default hover:bg-blue-100 hover:text-blue-700 dark:hover:bg-blue-900 dark:hover:text-blue-300"
+                    : "text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 cursor-pointer"
                 )}
               >
                 <a href={item.url}>
@@ -75,8 +76,8 @@ export function NavMain({
                           className={cn(
                             "px-3 py-1.5 text-sm rounded-md transition-colors",
                             isSubActive
-                              ? "bg-blue-50 text-blue-700 dark:bg-blue-800 dark:text-blue-300"
-                              : "text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800"
+                              ? "bg-blue-50 text-blue-700 dark:bg-blue-800 dark:text-blue-300 cursor-default hover:bg-blue-50 hover:text-blue-700 dark:hover:bg-blue-800 dark:hover:text-blue-300"
+                              : "text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 cursor-pointer"
                           )}
                         >
                           <a href={subItem.url}>

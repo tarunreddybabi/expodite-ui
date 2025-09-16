@@ -39,7 +39,7 @@ export default function RootLayout({
           <SidebarProvider>
             <AppSidebar />
             <main className="flex-1">
-              <div className="p-6 h-full">{children}</div>
+              <div className="h-full">{children}</div>
             </main>
           </SidebarProvider>
         </ThemeProvider>

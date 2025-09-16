@@ -117,16 +117,16 @@ const Inventory = () => {
 
   return (
     <div className="flex h-full">
-      <div className="w-[18%] border-r h-full p-4 space-y-4">
-        <h1 className="text-xl font-semibold border-b pb-3">
+      <div className="w-[18%] border-r h-full space-y-4">
+        <h1 className="text-xl font-semibold border-b p-6 pb-3">
           Inventory ({data.length})
         </h1>
-        <div className="space-y-2">
+        <div className="space-y-2 px-4">
           <p className="text-sm font-medium">Shipment Date</p>
           <DatePicker className="w-full" />
         </div>
 
-          <div className="space-y-2">
+          <div className="space-y-2 px-4">
           <p className="text-sm font-medium">Category</p>
           <Select>
             <SelectTrigger className="w-full">
@@ -144,7 +144,7 @@ const Inventory = () => {
           </Select>
         </div>
 
-        <div className="space-y-2">
+        <div className="space-y-2 px-4">
           <p className="text-sm font-medium">Status</p>
           <Select>
             <SelectTrigger className="w-full">
@@ -164,7 +164,7 @@ const Inventory = () => {
       </div>
 
       <div className="w-[82%]">
-        <div className="flex px-6 py-2.5 border-b mb-6 justify-between items-center shadow-sm">
+        <div className="flex p-3.5 border-b mb-6 justify-between items-center">
           <div className="relative w-[250px]">
             <Search className="absolute left-2 top-1/2 -translate-y-1/2 text-gray-500 w-4 h-4" />
             <Input

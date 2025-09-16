@@ -30,7 +30,7 @@ export function NavUser({
   };
 }) {
   const { isMobile } = useSidebar();
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme(); // ✅ use resolvedTheme
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => setMounted(true), []);
@@ -82,10 +82,12 @@ export function NavUser({
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
             <DropdownMenuItem
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              onClick={() =>
+                setTheme(resolvedTheme === "dark" ? "light" : "dark")
+              }
             >
-              {theme === "dark" ? <Sun /> : <Moon />}
-              {theme === "dark" ? "Light Mode" : "Dark Mode"}
+              {resolvedTheme === "dark" ? <Sun /> : <Moon />}
+              {resolvedTheme === "dark" ? "Light Mode" : "Dark Mode"}
             </DropdownMenuItem>
             <DropdownMenuSeparator />
 
