@@ -3,8 +3,8 @@
 import Link from "next/link";
 import { ColumnDef } from "@tanstack/react-table";
 import { ChevronRight } from "lucide-react";
-
-import { CustomCard, CustomTable } from "@/components";
+import { CustomCard } from "@/components/rootComponents/CustomCard";
+import { CustomTable } from "@/components/rootComponents/CustomTable";
 
 export type Payment = {
   id: string;

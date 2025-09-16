@@ -6,7 +6,6 @@ import { ColumnDef } from "@tanstack/react-table";
 
 import {
   Button,
-  CustomTable,
   Input,
   Select,
   SelectContent,
@@ -15,7 +14,8 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@/components";
+} from "@/components/ui";
+import { CustomTable } from "@/components/rootComponents/CustomTable";
 
 export type PurchaseOrder = {
   id: string;

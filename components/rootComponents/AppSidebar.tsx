@@ -43,7 +43,7 @@ const data = {
     { title: "Shipments", url: "/shipments", icon: Truck },
     { title: "Invoices", url: "/invoices", icon: Receipt },
     { title: "Payments", url: "/payments", icon: CreditCard },
-    { title: "PO", url: "/purchase-orders", icon: FileSignature },
+    { title: "PO", url: "/po", icon: FileSignature },
     { title: "Inventory", url: "/inventory", icon: Boxes },
     { title: "Insurance", url: "/insurance", icon: ShieldCheck },
     { title: "Forward Contract", url: "/forward-contract", icon: Repeat },

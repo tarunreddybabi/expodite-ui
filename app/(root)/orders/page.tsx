@@ -7,7 +7,6 @@ import Link from "next/link";
 
 import {
   Button,
-  CustomTable,
   DatePicker,
   Input,
   Select,
@@ -17,7 +16,8 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@/components";
+} from "@/components/ui";
+import { CustomTable } from "@/components/rootComponents/CustomTable";
 
 export type Order = {
   id: string;

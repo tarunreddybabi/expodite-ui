@@ -4,16 +4,14 @@ import React from "react";
 import { Search } from "lucide-react";
 
 import {
-  AccountManagerForm,
   Button,
-  ContactForm,
-  DetailsForm,
   Input,
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/components";
+} from "@/components/ui";
+import { AccountManagerForm, ContactForm, DetailsForm } from "@/components/rootComponents/Client";
 
 const Clients = () => {
   const [search, setSearch] = React.useState("");
