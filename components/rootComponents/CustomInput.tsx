@@ -1,5 +1,10 @@
 import { cn } from "@/lib/utils";
-import { Control, ControllerRenderProps, FieldValues, Path } from "react-hook-form";
+import {
+  Control,
+  ControllerRenderProps,
+  FieldValues,
+  Path,
+} from "react-hook-form";
 import { ReactNode } from "react";
 
 import {
@@ -8,7 +13,7 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-  Input
+  Input,
 } from "@/components/ui";
 
 interface CustomInputProps<T extends FieldValues> {
@@ -51,6 +56,10 @@ export const CustomInput = <T extends FieldValues>({
                 placeholder={placeholder}
                 required={required}
                 {...field}
+                className={cn(
+                  "h-11 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 hover:border-gray-400 dark:hover:border-gray-500 transition-colors",
+                  className
+                )}
               />
             )}
           </FormControl>

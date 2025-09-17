@@ -51,7 +51,7 @@ export const CustomSelect = <T extends FieldValues>({
         <FormItem className={cn(className)}>
           <FormLabel
             className={cn(
-              "block mb-2 font-medium",
+              "block font-medium",
               labelColor ?? "text-gray-700 dark:text-gray-300"
             )}
             htmlFor={name}

@@ -1,14 +1,14 @@
 "use client";
 
+import { AddAddressDialog } from "./ClientAddress";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 
+import { Button, Form } from "@/components/ui";
 import { CustomInput } from "../CustomInput";
 import { CustomSelect } from "../CustomSelect";
 import { FileUpload } from "../CustomUpload";
-import { Form, Button } from "@/components/ui";
-import { AddAddressDialog } from "../ClientAddress";
 
 const formSchema = z.object({
   organizationName: z
@@ -34,7 +34,6 @@ const formSchema = z.object({
   endUseCode: z.string().min(1, { message: "Please select an end use code." }),
   currency: z.string().min(1, { message: "Please select a currency." }),
 });
-
 export const DetailsForm = () => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -58,14 +57,12 @@ export const DetailsForm = () => {
   };
 
   const formReset = () => form.reset();
-
   return (
     <div className="space-y-8">
       <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-md shadow-sm border border-gray-200 dark:border-gray-700">
         <h2 className="text-xl font-semibold mb-4 text-gray-900 dark:text-gray-100">
           Client Details
         </h2>
-
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -194,6 +191,7 @@ export const DetailsForm = () => {
               >
                 Cancel
               </Button>
+
               <Button type="submit">Submit</Button>
             </div>
           </form>
@@ -202,7 +200,7 @@ export const DetailsForm = () => {
 
       <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-md shadow-sm border border-gray-200 dark:border-gray-700 flex justify-between items-center">
         <h2 className="text-lg font-medium">Address Details</h2>
-        <AddAddressDialog/>
+        <AddAddressDialog />
       </div>
     </div>
   );
